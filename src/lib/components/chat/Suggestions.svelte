@@ -63,7 +63,7 @@
 	}
 </script>
 
-<div class="mb-1 flex gap-1 text-xs font-medium items-center text-gray-400 dark:text-gray-600">
+<div class="mb-1 flex gap-1 text-xs font-medium items-center text-orange-400 dark:text-gray-600">
 	{#if filteredPrompts.length > 0}
 		<Bolt />
 		{$i18n.t('Suggested')}

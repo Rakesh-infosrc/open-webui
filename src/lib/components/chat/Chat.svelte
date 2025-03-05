@@ -2047,7 +2047,7 @@
 							</div>
 						</div>
 					{:else}
-						<div class="overflow-auto w-full h-full flex items-center">
+						<div class="overflow-auto w-full h-full flex items-center bg-linear-to-r from-blue-300 to-fuchsia-300">
 							<Placeholder
 								{history}
 								{selectedModels}

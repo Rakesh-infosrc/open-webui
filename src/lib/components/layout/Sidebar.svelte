@@ -452,7 +452,7 @@
 	<div
 		class=" {$isApp
 			? ' ml-[4.5rem] md:ml-0'
-			: ''} fixed md:hidden z-40 top-0 right-0 left-0 bottom-0 bg-black/60 w-full min-h-screen h-screen flex justify-center overflow-hidden overscroll-contain"
+			: ''} fixed md:hidden z-40 top-0 right-0 left-0 bottom-0 bg-gray-50 w-full min-h-screen h-screen flex justify-center overflow-hidden overscroll-contain"
 		on:mousedown={() => {
 			showSidebar.set(!$showSidebar);
 		}}
@@ -466,18 +466,18 @@
 		? 'md:relative w-[260px] max-w-[260px]'
 		: '-translate-x-[260px] w-[0px]'} {$isApp
 		? `ml-[4.5rem] md:ml-0 `
-		: 'transition-width duration-200 ease-in-out'}  shrink-0 bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-200 text-sm fixed z-50 top-0 left-0 overflow-x-hidden
+		: 'transition-width duration-200 ease-in-out'} shrink-0 text-gray-900 dark:bg-gray-950 dark:text-gray-200 text-sm fixed z-50 top-0 left-0 overflow-x-hidden
         "
 	data-state={$showSidebar}
 >
 	<div
-		class="py-2 my-auto flex flex-col justify-between h-screen max-h-[100dvh] w-[260px] overflow-x-hidden z-50 {$showSidebar
+		class="py-2 my-auto flex flex-col justify-between h-screen max-h-[100dvh] w-[260px] overflow-x-hidden z-50  bg-white/30 backdrop-blur-md  {$showSidebar
 			? ''
-			: 'invisible'}"
+			: 'invisible'}"	
 	>
-		<div class="px-1.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400">
+		<div class="px-1.5 flex justify-between space-x-1 bg-white text-gray-600 dark:text-gray-400">
 			<button
-				class=" cursor-pointer p-[7px] flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+				class=" cursor-pointer p-[7px] flex rounded-xl text-black hover:bg-gray-400 dark:hover:bg-gray-900 transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}
@@ -502,7 +502,7 @@
 
 			<a
 				id="sidebar-new-chat-button"
-				class="flex justify-between items-center flex-1 rounded-lg px-2 py-1 h-full text-right hover:bg-gray-100 dark:hover:bg-gray-900 transition no-drag-region"
+				class="flex justify-between items-center flex-1 rounded-lg px-2 py-1 h-full text-right hover:bg-gray-400 dark:hover:bg-gray-900 transition no-drag-region"
 				href="/"
 				draggable="false"
 				on:click={async () => {
@@ -521,7 +521,7 @@
 					<div class="self-center mx-1.5">
 						<img
 							crossorigin="anonymous"
-							src="{WEBUI_BASE_URL}/static/favicon.png"
+							src="{WEBUI_BASE_URL}/static/logo.png"
 							class=" size-5 -translate-x-1.5 rounded-full"
 							alt="logo"
 						/>
@@ -596,7 +596,7 @@
 					</div>
 
 					<div class="flex self-center translate-y-[0.5px]">
-						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Workspace')}</div>
+						<div class="  text-blue-400 self-center font-medium text-sm font-primary">{$i18n.t('Workspace')}</div>
 					</div>
 				</a>
 			</div>
@@ -893,7 +893,7 @@
 						}}
 					>
 						<button
-							class=" flex items-center rounded-xl py-2.5 px-2.5 w-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+							class=" flex items-center rounded-xl py-2.5 px-2.5 w-full bg-gray-300 hover:bg-gray-500 dark:hover:bg-gray-900 transition"
 							on:click={() => {
 								showDropdown = !showDropdown;
 							}}

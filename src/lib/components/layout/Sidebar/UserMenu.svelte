@@ -31,14 +31,14 @@
 
 	<slot name="content">
 		<DropdownMenu.Content
-			class="w-full {className} text-sm rounded-xl px-1 py-1.5 z-50 bg-white dark:bg-gray-850 dark:text-white shadow-lg font-primary"
+			class="w-full {className}  bg-transparent text-sm rounded-xl px-1 py-1.5 z-50 border-2 backdrop-filter backdrop-blur-md bg-opacity-20 border-black  dark:bg-gray-850 dark:text-white shadow-lg font-primary"
 			sideOffset={8}
 			side="bottom"
 			align="start"
 			transition={(e) => fade(e, { duration: 100 })}
 		>
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-blue-800 dark:hover:bg-gray-800 transition"
 				on:click={async () => {
 					await showSettings.set(true);
 					show = false;
